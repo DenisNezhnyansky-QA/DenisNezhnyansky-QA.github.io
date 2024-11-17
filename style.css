@@ -29,9 +29,12 @@ body {
 .header__subtitle {
   color: #000000 ;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
+  background: #FFFF00;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .links {
