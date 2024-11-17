@@ -1,7 +1,7 @@
 body {
   font-family: "Helvetica";
   background-image: url(https://images.wallpaperscraft.ru/image/single/stol_ekrany_stul_1049560_2560x1600.jpg);
-  color: #FFFF00      ;
+  color: #FFFF00            ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,13 +21,17 @@ body {
   font-size: 32px;
   line-height: 1.2;
   font-family: "Helvetica Neue";
+  background: #000000;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .header__subtitle {
-  color: #FFFF00 ;
-  font-size: 16px;
+  color: #000000 ;
+  font-size: 14px;
   line-height: 1.4;
   margin: 0;
+  padding: 10px;
 }
 
 .links {
@@ -40,6 +44,9 @@ body {
   font-size: 24px;
   line-height: 1.4;
   margin: 0 0 15px 0;
+  background: #000000;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .links__container {
