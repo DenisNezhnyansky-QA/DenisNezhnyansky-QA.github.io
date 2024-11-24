@@ -16,6 +16,16 @@ body {
   border-radius: 50%;
 }
 
+.header__DnMbHwOPQrk {
+  border-radius: 50%;
+  height: 320px;
+  width: 320px;
+}
+
+.header__DnMbHwOPQrk:hover {
+  border: 3px solid #FFD700;
+}
+
 .header__title {
   margin: 30px 0 10px 0;
   font-size: 32px;
