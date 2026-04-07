@@ -1,7 +1,7 @@
-/* Это объявление переменной, мы наши кнопку по тегу */
-const button = document.querySelector('button');
+const credoButton = document.getElementById("credoButton");
 
-/* Тут на кнопку навешиваем обрабочик, который ждёт клика и тогда запустит логику */
-button.addEventListener('click', function() {
-	alert('Человек умирает тогда, когда перестаёт развиваться')
-})
+if (credoButton) {
+  credoButton.addEventListener("click", function () {
+    alert("Качество — это не случайность, а результат внимания к деталям.");
+  });
+}
