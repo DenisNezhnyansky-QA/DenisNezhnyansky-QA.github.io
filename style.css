@@ -25,6 +25,11 @@ a {
   padding: 32px 20px 56px;
 }
 
+.hero,
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -82,11 +87,59 @@ a {
 }
 
 .hero__description {
-  margin: 0;
+  margin: 0 0 20px;
   max-width: 700px;
   font-size: 16px;
   line-height: 1.7;
   color: #b8c0d4;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7db8ff, #a6d0ff);
+  color: #0b1220;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button-download:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f5c84c, #ffdf7a);
+  box-shadow: 0 12px 28px rgba(125, 184, 255, 0.2);
+}
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f7fb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  border-color: #f5c84c;
+  color: #f5c84c;
+  box-shadow: 0 12px 28px rgba(245, 200, 76, 0.12);
 }
 
 .content {
@@ -101,6 +154,10 @@ a {
   background: rgba(13, 18, 31, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.card--full {
+  grid-column: 1 / -1;
 }
 
 .card__title {
@@ -167,26 +224,16 @@ a {
   width: 100%;
 }
 
-.footer {
-  margin-top: 28px;
-}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-.button-link {
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #f5c84c, #ffdf7a);
-  color: #111827;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.button-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(245, 200, 76, 0.28);
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 900px) {
@@ -200,11 +247,20 @@ a {
   }
 
   .hero__description {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
   }
 
   .content {
     grid-template-columns: 1fr;
+  }
+
+  .card--full {
+    grid-column: auto;
   }
 }
 
@@ -236,7 +292,12 @@ a {
     text-align: left;
   }
 
-  .button-link {
-    font-size: 15px;
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .button-download,
+  .button-secondary {
+    width: 100%;
   }
 }
