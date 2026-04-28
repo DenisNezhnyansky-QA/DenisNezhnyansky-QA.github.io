@@ -49,6 +49,7 @@ a {
   max-width: 260px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center 35%;
   border-radius: 50%;
   border: 4px solid #f5c84c;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
